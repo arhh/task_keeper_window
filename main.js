@@ -1,6 +1,8 @@
 const { app, BrowserWindow, Menu } = require('electron')
 const config = require("./config.json");
 
+if (require('electron-squirrel-startup')) app.quit();
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: config.windowWidth,
