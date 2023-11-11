@@ -1,0 +1,19 @@
+{
+  "name": "task_keeper_window",
+  "version": "1.0.0",
+  "description": "Using electron to manage to do list on G Tasks",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arhh/task_keeper_window.git"
+  },
+  "author": "Arhh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arhh/task_keeper_window/issues"
+  },
+  "homepage": "https://github.com/arhh/task_keeper_window#readme"
+}
