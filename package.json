@@ -1,19 +1,33 @@
 {
   "name": "task_keeper_window",
   "version": "1.0.0",
-  "description": "Using electron to manage to do list on G Tasks",
+  "description": "Desktop web application to interact with Tasks and Calendar",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arhh/task_keeper_window.git"
   },
-  "author": "Arhh",
-  "license": "ISC",
+  "author": "arhh",
   "bugs": {
     "url": "https://github.com/arhh/task_keeper_window/issues"
   },
-  "homepage": "https://github.com/arhh/task_keeper_window#readme"
+  "homepage": "https://github.com/arhh/task_keeper_window#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "^27.0.4"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "1.0.0"
+  }
 }
