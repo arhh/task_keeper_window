@@ -10,12 +10,29 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-    
-    strategy:
-      matrix:
-        os: ["ubuntu-20.04", "windows-2019", "macos-10.15"]
+  build-linux:
+    runs-on: "ubuntu-20.04"
+  
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v3
+      
+    - name: Use Node.js 18
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+    - run: npm ci
+    - run: npm run make
+
+    - name: Upload build artefacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-zip-ubuntu
+        path: out/make/zip/linux/x64/task_keeper_window-linux-x64-1.0.0.zip
+        retention-days: 1
+
+  build-windows:
+    runs-on: "windows-2019"
 
     steps:
     - name: Check out repo
@@ -31,5 +48,6 @@ jobs:
     - name: Upload build artefacts
       uses: actions/upload-artifact@v3
       with:
-        name: app-zip
-        path: out
+        name: app-zip-windows
+        path: "out\\make\\squirrel.windows\\x64\\task_keeper_window-1.0.0 Setup.exe"
+        retention-days: 1
