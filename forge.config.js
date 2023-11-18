@@ -9,6 +9,18 @@ module.exports = {
       name: '@electron-forge/maker-zip',
     },
   ],
+  // publishers: [
+  //   {
+  //     name: '@electron-forge/publisher-github',
+  //     config: {
+  //       authToken: '<value needed>',
+  //       repository: {
+  //         owner: 'arhh',
+  //         name: 'task_keeper_window'
+  //       },
+  //     }
+  //   }
+  // ],
   plugins: [
     {
       // When asar = true, it improves performance by unpacking native node.js modules from asar
