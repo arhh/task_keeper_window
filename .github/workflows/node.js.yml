@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-linux:
-    runs-on: "ubuntu-20.04"
+    runs-on: "ubuntu-22.04"
   
     steps:
     - name: Check out repo
@@ -29,7 +29,7 @@ jobs:
         retention-days: 1
 
   build-mac:
-    runs-on: "macos-latest"
+    runs-on: "macos-12"
 
     steps:
     - name: Check out repo
