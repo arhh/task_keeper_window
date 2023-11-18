@@ -25,28 +25,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: app-zip-ubuntu
-        path: out/make/zip/linux/x64/task_keeper_window-linux-x64-1.0.0.zip
-        retention-days: 1
-
-  build-windows:
-    runs-on: "windows-2019"
-
-    steps:
-    - name: Check out repo
-      uses: actions/checkout@v3
-      
-    - name: Use Node.js 18
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
-    - run: npm ci
-    - run: npm run make
-
-    - name: Upload build artefacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: app-zip-windows
-        path: "out\\make\\squirrel.windows\\x64\\task_keeper_window-1.0.0 Setup.exe"
+        path: out/make/zip/linux/x64/g-apps-navigator-linux-x64-1.0.0.zip
         retention-days: 1
 
   build-mac:
