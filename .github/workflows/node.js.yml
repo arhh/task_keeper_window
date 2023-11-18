@@ -19,13 +19,13 @@ jobs:
       with:
         node-version: 18
     - run: npm ci
-    - run: npm run package
+    - run: npm run make
 
     - name: Upload artefact
       uses: actions/upload-artifact@v3
       with:
         name: app-zip-ubuntu
-        path: out
+        path: out/make/zip/linux
         retention-days: 1
 
   build-mac:
@@ -40,11 +40,11 @@ jobs:
       with:
         node-version: 18
     - run: npm ci
-    - run: npm run package
+    - run: npm run make
 
     - name: Upload artefact
       uses: actions/upload-artifact@v3
       with:
         name: app-zip-mac
-        path: out
+        path: out/make/zip/darwin
         retention-days: 1
