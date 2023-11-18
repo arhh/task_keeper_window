@@ -1,18 +1,18 @@
 const { app, BrowserWindow, Menu } = require('electron')
 const config = require("./config.json");
 
-if (require('electron-squirrel-startup')) app.quit();
-
 const createWindow = () => {
   const win = new BrowserWindow({
     width: config.windowWidth,
     height: config.windowHeight,
     show: false,
+    icon: 'resources/material_apps.png',
   });
 
   win.loadURL(config.appUrl);
 
   win.once('ready-to-show', () => {
+    win.setTitle(config.title);
     win.show()
   })
 }
@@ -22,9 +22,7 @@ app.whenReady().then(() => {
 });
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit();
-  }
+  app.quit();
 });
 
 Menu.setApplicationMenu(null);

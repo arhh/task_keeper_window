@@ -1,5 +1,6 @@
 {
     "appUrl": "https://calendar.google.com",
-    "windowWidth": 1024,
-    "windowHeight": 768
+    "windowWidth": 1200,
+    "windowHeight": 768,
+    "title": "G Apps Navigator"
 }

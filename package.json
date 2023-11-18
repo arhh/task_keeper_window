@@ -1,10 +1,9 @@
 {
-  "name": "task_keeper_window",
+  "name": "g-apps-navigator",
   "version": "1.0.0",
-  "description": "Desktop web application to interact with Tasks and Calendar",
-  "main": "main.js",
+  "description": "Desktop web application to interact with G Apps",
+  "main": "main.cjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
