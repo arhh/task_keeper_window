@@ -1,4 +1,4 @@
-name: Build Linux and Mac distributables of application
+name: Build App
 
 on:
   push:
@@ -14,18 +14,18 @@ jobs:
     - name: Check out repo
       uses: actions/checkout@v3
       
-    - name: Use Node.js 18
+    - name: Build
       uses: actions/setup-node@v3
       with:
         node-version: 18
     - run: npm ci
-    - run: npm run make
+    - run: npm run package
 
-    - name: Upload build artefacts
+    - name: Upload artefact
       uses: actions/upload-artifact@v3
       with:
         name: app-zip-ubuntu
-        path: out/make/zip/linux/x64/g-apps-navigator-linux-x64-1.0.0.zip
+        path: out
         retention-days: 1
 
   build-mac:
@@ -35,16 +35,16 @@ jobs:
     - name: Check out repo
       uses: actions/checkout@v3
       
-    - name: Use Node.js 18
+    - name: Build
       uses: actions/setup-node@v3
       with:
         node-version: 18
     - run: npm ci
-    - run: npm run make
+    - run: npm run package
 
-    - name: Upload build artefacts
+    - name: Upload artefact
       uses: actions/upload-artifact@v3
       with:
         name: app-zip-mac
-        path: out/make/zip/
+        path: out
         retention-days: 1
