@@ -9,11 +9,19 @@ const createWindow = () => {
     icon: 'resources/material_apps.png',
   });
 
+  // Same behaviour as win.webContents.loadURL(...)
   win.loadURL(config.appUrl);
 
   win.once('ready-to-show', () => {
     win.setTitle(config.title);
     win.show()
+  })
+
+  // Load contents of new windows in main window instead.
+  // Avoids desktop clutter
+  win.webContents.setWindowOpenHandler((details) => {
+    win.loadURL(details.url);
+    return {action: 'deny'};
   })
 }
 
