@@ -2,7 +2,7 @@
 An electron app to log into Google Calendar.
 
 ## Rationale
-As of this application's first release, there is no desktop tool to interact with Google Calendar, Tasks, and Notes with a UI consistent with the web application.
+As of this writing (January 2024), there is no desktop tool to interact with Google Calendar, Tasks, and Notes with a UI consistent with the web application.
 
 ## Notes
 * Executables for macOS and Linux are created on pushes to the `main` branch or pull requests to `main`. They are stored as _GitHub Actions Artifacts_ for one day.
