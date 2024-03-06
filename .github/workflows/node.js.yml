@@ -12,17 +12,17 @@ jobs:
   
     steps:
     - name: Check out repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Build
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 18
     - run: npm ci
     - run: npm run make
 
     - name: Upload artefact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: app-zip-ubuntu
         path: out/make/zip/linux
@@ -33,17 +33,17 @@ jobs:
 
     steps:
     - name: Check out repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Build
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 18
     - run: npm ci
     - run: npm run make
 
     - name: Upload artefact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: app-zip-mac
         path: out/make/zip/darwin
