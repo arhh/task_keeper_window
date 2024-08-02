@@ -1,7 +1,10 @@
+const config = require('./config.json');
+
 module.exports = {
   packagerConfig: {
     asar: true, // https://electron.github.io/packager/main/interfaces/electronpackager.options.html#asar
-    icon: 'resources/material_apps'
+    icon: 'resources/material_apps',
+    name: config.titleCamelCase,
   },
   rebuildConfig: {},
   makers: [
