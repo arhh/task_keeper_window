@@ -11,6 +11,6 @@ As of this writing (January 2024), there is no desktop tool to interact with Goo
 ## Running Locally
 The project is made with electron-forge and node.js 18
 1. Clone repo.
-2. Run `npm i` in the project codebase.
+2. Run `npm ci` in the project codebase.
 3. Run `npm run start` to start the application in development mode (local storage location is printed to console in case you want to clear it later).
 4. Run `npm run package` to create an executable for the current platform.
