@@ -2,6 +2,7 @@
   "name": "g-apps-navigator",
   "version": "1.0.0",
   "description": "Desktop web application to interact with G Apps",
+  "license": "MIT",
   "main": "main.cjs",
   "scripts": {
     "start": "electron-forge start",
