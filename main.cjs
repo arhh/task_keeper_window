@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, BrowserWindow } = require('electron')
 const config = require("./config.json");
 
 const createWindow = () => {
@@ -33,6 +33,5 @@ app.on('window-all-closed', () => {
   app.quit();
 });
 
-Menu.setApplicationMenu(null);
 console.log("Session data (inc. logged in account) stored in: " + app.getPath("sessionData"));
 
