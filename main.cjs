@@ -14,22 +14,34 @@ const createWindow = () => {
 
   win.once('ready-to-show', () => {
     win.setTitle(config.title);
+
+    // Add quick navigation menu item
     const appMenu = Menu.getApplicationMenu();
     const quickNavigationMenuItem = new MenuItem({
-      label: 'Quick Navigate',
-      sublabel: 'Navigate to a popular app',
+      label: 'Quick Navigation',
       id: 'quick-nav',
       submenu: [
         {
           id: 'drive',
-          label: 'Drive',
-          sublabel: 'Drive sublabel'
+          label: 'Drive'
+        },
+        {
+          id: 'photos',
+          label: 'Photos'
+        },
+        {
+          id: 'keep',
+          label: 'Keep'
+        },
+        {
+          id: 'calendar',
+          label: 'Calendar and Tasks'
         }
       ]
     });
-
     appMenu.append(quickNavigationMenuItem);
     Menu.setApplicationMenu(appMenu);
+
     win.show();
   })
 
