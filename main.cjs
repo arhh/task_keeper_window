@@ -1,5 +1,9 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, Menu, MenuItem } = require('electron')
 const config = require("./config.json");
+
+const handleQuickNavigationClick = async (menuItem, focusedWindow, _) => {
+  await focusedWindow.loadURL(config.navigation[menuItem.id]);
+};
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -14,7 +18,39 @@ const createWindow = () => {
 
   win.once('ready-to-show', () => {
     win.setTitle(config.title);
-    win.show()
+
+    // Add quick navigation menu item
+    const appMenu = Menu.getApplicationMenu();
+    const quickNavigationMenuItem = new MenuItem({
+      label: 'Quick Navigation',
+      id: 'quick-nav',
+      submenu: [
+        {
+          id: 'drive',
+          label: 'Drive',
+          click: handleQuickNavigationClick,
+        },
+        {
+          id: 'photos',
+          label: 'Photos',
+          click: handleQuickNavigationClick,
+        },
+        {
+          id: 'keep',
+          label: 'Keep',
+          click: handleQuickNavigationClick,
+        },
+        {
+          id: 'calendar',
+          label: 'Calendar and Tasks',
+          click: handleQuickNavigationClick,
+        }
+      ]
+    });
+    appMenu.append(quickNavigationMenuItem);
+    Menu.setApplicationMenu(appMenu);
+
+    win.show();
   })
 
   // Load contents of new windows in main window instead.

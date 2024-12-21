@@ -3,5 +3,11 @@
     "windowWidth": 1200,
     "windowHeight": 768,
     "title": "G Apps Navigator",
-    "titleCamelCase": "GAppsNavigator"
+    "titleCamelCase": "GAppsNavigator",
+    "navigation": {
+        "drive": "https://drive.google.com",
+        "photos": "https://photos.google.com",
+        "calendar": "https://calendar.google.com",
+        "keep": "https://keep.google.com"
+    }
 }
