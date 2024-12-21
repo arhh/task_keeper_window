@@ -1,6 +1,10 @@
 const { app, BrowserWindow, Menu, MenuItem } = require('electron')
 const config = require("./config.json");
 
+const handleQuickNavigationClick = async (menuItem, focusedWindow, _) => {
+  await focusedWindow.loadURL(config.navigation[menuItem.id]);
+};
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: config.windowWidth,
@@ -23,19 +27,23 @@ const createWindow = () => {
       submenu: [
         {
           id: 'drive',
-          label: 'Drive'
+          label: 'Drive',
+          click: handleQuickNavigationClick,
         },
         {
           id: 'photos',
-          label: 'Photos'
+          label: 'Photos',
+          click: handleQuickNavigationClick,
         },
         {
           id: 'keep',
-          label: 'Keep'
+          label: 'Keep',
+          click: handleQuickNavigationClick,
         },
         {
           id: 'calendar',
-          label: 'Calendar and Tasks'
+          label: 'Calendar and Tasks',
+          click: handleQuickNavigationClick,
         }
       ]
     });
