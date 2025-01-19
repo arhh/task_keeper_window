@@ -29,7 +29,7 @@ jobs:
         retention-days: 1
 
   build-mac:
-    runs-on: "macos-12"
+    runs-on: "macos-15"
 
     steps:
     - name: Check out repo
