@@ -7,6 +7,7 @@ As of this writing (January 2024), there is no desktop tool to interact with Goo
 ## Notes
 * Executables for macOS and Linux are created on pushes to the `main` branch or pull requests to `main`. They are stored as _GitHub Actions Artifacts_ for one day.
 * This application does not support Windows.
+* This application's electron package must be downgraded to v32.x to support macOS 10.15 (Catalina) due to later versions [dropping support](https://www.electronjs.org/docs/latest/breaking-changes#removed-macos-1015-support).
 
 ## Running Locally
 The project is made with electron-forge and node.js 18
