@@ -14,3 +14,4 @@ The project is made with electron-forge and node.js 18
 2. Run `npm ci` in the project codebase.
 3. Run `npm run start` to start the application in development mode (local storage location is printed to console in case you want to clear it later).
 4. Run `npm run package` to create an executable for the current platform.
+5. Run `npm run make` to make the executable for the current platform _and_ zip it.
