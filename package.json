@@ -20,5 +20,16 @@
   "devDependencies": {
     "electron-builder": "~26.18.0",
     "electron": "^42.0.1"
-  }
+  },
+  "build": {
+    "concurrency": {"jobs": 2},
+    "linux": {
+      "category": "Internet",
+      "target": [
+        "AppImage",
+        "zip"
+      ]
+    }
+  },
+  "desktopName": "g-apps-navigator"
 }
