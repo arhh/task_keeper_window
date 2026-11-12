@@ -22,13 +22,13 @@
     "electron": "^42.0.1"
   },
   "build": {
-    "concurrency": {"jobs": 2},
     "linux": {
-      "category": "Internet",
-      "target": [
-        "AppImage",
-        "zip"
-      ]
+      "category": "Network",
+      "target": ["AppImage"],
+      "artifactName": "${productName}.${ext}"
+    },
+    "win": {
+      "target": ["msix"]
     }
   },
   "desktopName": "g-apps-navigator"
