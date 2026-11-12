@@ -29,7 +29,8 @@
     },
     "win": {
       "target": ["msix"]
-    }
+    },
+    "publish": null
   },
   "desktopName": "g-apps-navigator"
 }
