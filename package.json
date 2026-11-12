@@ -6,7 +6,7 @@
   "main": "main.cjs",
   "scripts": {
     "start": "electron .",
-    "package": "electron-builder"
+    "package": "electron-builder --publish never"
   },
   "repository": {
     "type": "git",
@@ -29,8 +29,7 @@
     },
     "win": {
       "target": ["msix"]
-    },
-    "publish": null
+    }
   },
   "desktopName": "g-apps-navigator"
 }
