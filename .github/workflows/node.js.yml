@@ -8,8 +8,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-linux:
-    runs-on: "ubuntu-24.04"
+  build:
+    strategy:
+      matrix:
+        os: ["ubuntu-slim", "windows-latest"]
+    runs-on: ${{ matrix.os }}
   
     steps:
     - name: Check out repo
@@ -25,6 +28,27 @@ jobs:
     - name: Upload artefact
       uses: actions/upload-artifact@v7.0.2
       with:
-        name: appimage-ubuntu
-        path: dist/g-apps-navigator.AppImage
+        name: distributable
+        path: dist
         retention-days: 1
+
+  # build-windows:
+  #   runs-on: "windows-latest"
+  
+  #   steps:
+  #   - name: Check out repo
+  #     uses: actions/checkout@v7.0.1
+      
+  #   - name: Build
+  #     uses: actions/setup-node@v7.1.0
+  #     with:
+  #       node-version: 24
+  #   - run: npm ci
+  #   - run: npm run package
+
+  #   - name: Upload artefact
+  #     uses: actions/upload-artifact@v7.0.2
+  #     with:
+  #       name: distributable-windows
+  #       path: dist
+  #       retention-days: 1
