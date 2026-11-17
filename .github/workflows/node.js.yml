@@ -29,8 +29,9 @@ jobs:
       uses: actions/upload-artifact@v7.0.2
       with:
         name: distributable
-        path: dist
+        path: **/g-apps-navigator.*
         retention-days: 1
+        archive: false
 
   # build-windows:
   #   runs-on: "windows-latest"
