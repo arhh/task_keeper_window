@@ -29,7 +29,8 @@
     },
     "win": {
       "target": ["appx"],
-      "artifactName": "${productName}.${ext}"
+      "artifactName": "${productName}.${ext}",
+      "appId": "GAppsNavigator"
     }
   },
   "desktopName": "g-apps-navigator"
