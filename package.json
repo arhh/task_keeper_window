@@ -28,9 +28,8 @@
       "artifactName": "${productName}.${ext}"
     },
     "win": {
-      "target": ["appx"],
-      "artifactName": "${productName}.${ext}",
-      "appId": "GAppsNavigator"
+      "target": ["nsis"],
+      "artifactName": "${productName}.${ext}"
     }
   },
   "desktopName": "g-apps-navigator"
