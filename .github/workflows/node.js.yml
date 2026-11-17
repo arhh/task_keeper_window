@@ -31,7 +31,6 @@ jobs:
         name: distributable
         path: **/g-apps-navigator.*
         retention-days: 1
-        archive: false
 
   # build-windows:
   #   runs-on: "windows-latest"
