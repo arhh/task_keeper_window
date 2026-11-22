@@ -11,28 +11,30 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  build-publish:
     strategy:
       matrix:
-        os: ["ubuntu-slim"]
+        os: ["ubuntu-slim", "windows-latest"]
     runs-on: ${{ matrix.os }}
   
     steps:
     - name: Check out repo
       uses: actions/checkout@v7.0.1
       
-    - name: Setup
+    - name: Setup Node.js
       uses: actions/setup-node@v7.1.0
       with:
         node-version: 24
       
-    - run: npm ci
+    - name: Install project
+      run: npm ci
 
-    - run: npm run package
+    - name: Pack and publish
+      run: npm run package
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Upload distributable
+    - name: Upload distributable artefacts
       uses: actions/upload-artifact@v7.0.2
       with:
         name: appimage
