@@ -12,10 +12,7 @@ permissions:
 
 jobs:
   build-publish:
-    strategy:
-      matrix:
-        os: ["ubuntu-slim", "windows-latest"]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-slim
   
     steps:
     - name: Check out repo
@@ -38,7 +35,5 @@ jobs:
       uses: actions/upload-artifact@v7.0.2
       with:
         name: distributable
-        path: |
-          "dist/g-apps-navigator.AppImage"
-          "dist/g-apps-navigator.exe"
+        path: "dist/g-apps-navigator.AppImage"
         retention-days: 1

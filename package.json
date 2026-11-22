@@ -27,10 +27,6 @@
       "category": "Network",
       "target": ["AppImage"],
       "artifactName": "${productName}.${ext}"
-    },
-    "win": {
-      "target": ["nsis"],
-      "artifactName": "${productName}.${ext}"
     }
   },
   "desktopName": "g-apps-navigator",
