@@ -18,14 +18,19 @@
   },
   "homepage": "https://github.com/arhh/task_keeper_window#readme",
   "devDependencies": {
-    "electron-builder": "~26.18.0",
     "electron": "^42.0.1",
+    "electron-builder": "~26.18.0"
+  },
+  "dependencies": {
+    "electron-log": "^5.4.4",
     "electron-updater": "^6.8.11"
   },
   "build": {
     "linux": {
       "category": "Network",
-      "target": ["AppImage"],
+      "target": [
+        "AppImage"
+      ],
       "artifactName": "${productName}.${ext}"
     }
   },

@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu, MenuItem } = require('electron')
+const { log } = require('electron-log/main')
 const config = require("./config.json");
 
 const handleQuickNavigationClick = async (menuItem, focusedWindow, _) => {
