@@ -26,7 +26,13 @@
     "linux": {
       "category": "Network",
       "target": ["AppImage"],
-      "artifactName": "${productName}.${ext}"
+      "artifactName": "${productName}.${ext}",
+      "desktop": {
+        "entry": {
+          "name": "G-Apps Navigator",
+          "description": "Web Client to access G Apps without using a web browser."
+        }
+      }
     }
   },
   "desktopName": "g-apps-navigator",
