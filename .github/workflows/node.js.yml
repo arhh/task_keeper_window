@@ -37,6 +37,8 @@ jobs:
     - name: Upload distributable artefacts
       uses: actions/upload-artifact@v7.0.2
       with:
-        name: appimage
-        path: "dist/g-apps-navigator.AppImage"
+        name: distributable
+        path: |
+          "dist/g-apps-navigator.AppImage"
+          "dist/g-apps-navigator.exe"
         retention-days: 1
