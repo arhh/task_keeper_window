@@ -2,17 +2,15 @@
 An electron app to log into Google Calendar.
 
 ## Rationale
-As of this writing (January 2024), there is no desktop tool to interact with Google Calendar, Tasks, and Notes with a UI consistent with the web application.
+As of November 2026, there is no desktop tool to interact with Google Calendar, Tasks, and Notes.
 
 ## Notes
-* Executables for macOS and Linux are created on pushes to the `main` branch or pull requests to `main`. They are stored as _GitHub Actions Artifacts_ for one day.
-* This application does not support Windows.
-* This application's electron package must be downgraded to v32.x to support macOS 10.15 (Catalina) due to later versions [dropping support](https://www.electronjs.org/docs/latest/breaking-changes#removed-macos-1015-support).
+* Executables for Linux are created on pushes to the `main` branch or pull requests to `main`. They are stored as _GitHub Actions Artifacts_ for one day.
+* This application does not support Windows and macOS.
 
 ## Running Locally
-The project is made with electron-forge and node.js 18
+The project is made with electron-builder and node.js 24
 1. Clone repo.
 2. Run `npm ci` in the project codebase.
 3. Run `npm run start` to start the application in development mode (local storage location is printed to console in case you want to clear it later).
 4. Run `npm run package` to create an executable for the current platform.
-5. Run `npm run make` to make the executable for the current platform _and_ zip it.
