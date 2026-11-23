@@ -6,6 +6,8 @@ const handleQuickNavigationClick = async (menuItem, focusedWindow, _) => {
   await focusedWindow.loadURL(config.navigation[menuItem.id]);
 };
 
+// TODO Debug logging for auto-update, auto-update itself, and default sessionData to be snake-case
+
 const createWindow = () => {
   const win = new BrowserWindow({
     width: config.windowWidth,

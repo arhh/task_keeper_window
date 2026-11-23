@@ -2,7 +2,7 @@
     "appUrl": "https://calendar.google.com",
     "windowWidth": 1600,
     "windowHeight": 900,
-    "title": "G Apps Navigator",
+    "title": "G-Apps Navigator",
     "navigation": {
         "drive": "https://drive.google.com",
         "photos": "https://photos.google.com",
