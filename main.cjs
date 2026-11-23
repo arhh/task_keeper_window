@@ -11,7 +11,7 @@ const createWindow = () => {
     width: config.windowWidth,
     height: config.windowHeight,
     show: false,
-    icon: 'resources/material_apps.png',
+    icon: 'build/256x256.png',
   });
 
   // Same behaviour as win.webContents.loadURL(...)

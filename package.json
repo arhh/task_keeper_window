@@ -1,5 +1,6 @@
 {
   "name": "g-apps-navigator",
+  "productName": "G-Apps Navigator",
   "version": "2.0.0",
   "description": "Desktop web application to interact with G Apps",
   "license": "MIT",
@@ -26,16 +27,22 @@
     "electron-updater": "^6.8.11"
   },
   "build": {
+    "appId": "com.github.arhh.g-apps-navigator",
     "linux": {
       "category": "Network",
       "target": [
         "AppImage"
       ],
-      "artifactName": "${productName}.${ext}"
+      "artifactName": "${name}.${ext}",
+      "syncDesktopName": true,
+      "icon": "256x256.png"
     }
   },
-  "desktopName": "g-apps-navigator",
+  "desktopName": "com.github.arhh.g-apps-navigator.desktop",
   "publish": {
     "provider": "github"
+  },
+  "toolsets": {
+    "appImage": "1.0.3"
   }
 }
